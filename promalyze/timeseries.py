@@ -3,6 +3,7 @@ Time Series handling
 """
 import pandas as pd
 
+
 class TimeSeries(object):
     """
     TimeSeries object handles matrix objects from Prometheus
@@ -11,10 +12,10 @@ class TimeSeries(object):
     def __init__(self, meta, ts):
         self.ts = ts
 
-        try:
+        if '__name__' in meta:
             self.name = meta['__name__']
             del meta['__name__']
-        except KeyError:
+        else:
             self.name = ''
 
         self.metadata = meta
