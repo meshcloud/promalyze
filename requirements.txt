@@ -1,6 +1,2 @@
 pandas
-coverage
-nose
-pylint
 requests
-twine
