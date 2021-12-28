@@ -47,7 +47,3 @@ class TestTimeSeries:
     def test_unnamed_as_json(self):
         assert self.unnamed_timeseries.as_json()['values'] == self.ts_data()
         assert self.unnamed_timeseries.as_json()['name'] == ''
-
-    def test_as_pandas_dataframe(self):
-        assert str(type(self.named_timeseries.as_pandas_dataframe())) == "<class 'pandas.core.frame.DataFrame'>"
-        assert str(type(self.unnamed_timeseries.as_pandas_dataframe())) == "<class 'pandas.core.frame.DataFrame'>"

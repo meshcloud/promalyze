@@ -22,8 +22,8 @@ ts = ts_data.timeseries[0] # returns a TimeSeries object
 
 json_data = ts.as_json()
 
-dataframe = ts.as_pandas_dataframe()
-
+# usage example: transform the data for this object into a pandas dataframe
+df = pandas.DataFrame(data=self.values(), index=self.timestamps(), columns=['values'])
 ```
 
 # Development
@@ -32,6 +32,7 @@ dataframe = ts.as_pandas_dataframe()
 
 ```bash
 pip install -r requirements.txt
+pip install -r dev-requirements.txt
 ```
 
 ## Run Tests

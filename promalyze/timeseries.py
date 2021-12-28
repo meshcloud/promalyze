@@ -1,8 +1,6 @@
 """
 Time Series handling
 """
-import pandas as pd
-
 
 class TimeSeries(object):
     """
@@ -44,10 +42,3 @@ class TimeSeries(object):
             'metadata': self.metadata,
             'values': self.ts
         }
-
-    def as_pandas_dataframe(self):
-        """
-        transforms the data for this object into a pandas dataframe
-        :return: pandas.DataFrame
-        """
-        return pd.DataFrame(data=self.values(), index=self.timestamps(), columns=['values'])
